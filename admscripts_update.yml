@@ -1,0 +1,5 @@
+---
+- hosts: cdhcprod_sec
+  remote_user: u945480
+  roles:
+    - admscripts_update

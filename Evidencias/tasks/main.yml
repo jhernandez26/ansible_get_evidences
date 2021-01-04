@@ -21,7 +21,9 @@
       msg: "Limpiando reporte"
 
   - name: Generar reporte de CIS
-    command: sudo /admscripts/scripts/cis-run
+    environment: 
+        TMOUT: 3000000000
+    shell: sudo /admscripts/scripts/cis-run
     tags:
     - cis-run
   - debug:

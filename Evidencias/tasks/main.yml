@@ -63,8 +63,9 @@
 
   - name: Obtener evidencia 
     fetch:
+      flat: yes
       src: /tmp/{{ ansible_hostname }}.gzip
-      dest: /{{ dir_dest }}CIS-REPORT-{{ fecha }}
+      dest: /{{ dir_dest }}CIS-REPORT-{{ fecha }}/
     tags:
     - local_directory
   - debug:

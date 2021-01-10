@@ -25,5 +25,85 @@ cdhccontaprod_maestro
 cdhccontaprod_edge
 cdhccontaprod_wrkr
 
+[saspldprod:vars]
+ansible_ssh_user= b945480
+ansible_ssh_pass= {{ ssh_user_saspldprod }}
+
+[saspldprod_hyper]
+sashyper1
+sashyper2
+
+[saspldprod_proc]
+sasaml01.prod.saspld.corp
+sasaml02.prod.saspld.corp
+sasvaar01.prod.saspld.corp
+sasvaar02.prod.saspld.corp
+sasfframe01.prod.saspld.corp
+sasfframe02.prod.saspld.corp
+
+[saspldprod_webs]
+saswebs01.prod.saspld.corp
+saswebs02.prod.saspld.corp
+
+[saspldprod_mdatos]
+sasmdata01.prod.saspld.corp
+sasmdata02.prod.saspld.corp
+sasmdata03.prod.saspld.corp
+sasmdata04.prod.saspld.corp
+
+[saspldprod_bd]
+sasbd01.prod.saspld.corp
+sasbd02.prod.saspld.corp
+
+[saspldprod:children]
+saspldprod_hyper
+saspldprod_proc
+saspldprod_webs
+saspldprod_mdatos
+saspldprod_bd
+
+[sasqaservera:vars]
+ansible_ssh_user= b945480
+ansible_ssh_pass= {{ ssh_user_saspldprod }}
+
+[saspldqa_proc]
+sasvaar1.qa.saspld.corp
+sasaml1.qa.saspld.corp
+sasfframe1.qa.saspld.corp
+
+[saspldqa_web]
+saswebs1.qa.saspld.corp
+
+[saspldqa_mdatos]
+sasmdata1.qa.saspld.corp
+
+[sasqaservera:children]
+saspldqa_proc
+saspldqa_web
+saspldqa_mdatos
+
+[sasdevserver:vars]
+ansible_ssh_user= b945480
+ansible_ssh_pass= {{ ssh_user_saspldprod }
+
+[sasplddev_proc]
+sasaml1.dev.saspld.corp
+sasfframe1.dev.saspld.corp
+sasvaar1.dev.saspld.corp
+
+[sasplddev_web]
+saswebs1.dev.saspld.corp
+
+[sasplddev_mdatos]
+sasmdata1.dev.saspld.corp
+
+[sasdevserver:children]
+sasplddev_proc
+sasplddev_web
+sasplddev_mdatos
+
 [all:children]
 cdhccontaprod
+saspldprod
+sasqaservera
+sasdevserver

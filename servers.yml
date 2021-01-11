@@ -1,6 +1,6 @@
 [cdhccontaprod:vars]
-ansible_ssh_user = u945480 
-ansible_ssh_pass = {{ ssh_user_cdccontaprod }}
+ansible_user = a945480 
+ansible_password = '{{ ssh_user_cdccontaprod }}'
 
 [cdhccontaprod_maestro]
 mgmtnode01.clouderags.corp
@@ -102,7 +102,7 @@ sasplddev_proc
 sasplddev_web
 sasplddev_mdatos
 
-[all:children]
+all:children]
 cdhccontaprod
 saspldprod
 sasqaservera

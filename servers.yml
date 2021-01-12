@@ -1,5 +1,5 @@
 [cdhccontaprod:vars]
-ansible_user = a945480 
+ansible_user = u945480 
 ansible_password = '{{ ssh_user_cdccontaprod }}'
 
 [cdhccontaprod_maestro]

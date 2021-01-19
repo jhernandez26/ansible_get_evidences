@@ -132,17 +132,17 @@ ansible_user = opereke
 ansible_password = '{{ ssh_user_opereke }}'
 
 [cdhccajaqa_mstr]
-awscajamgmt01.prod.clouderacaja.corp
-awscajamstr01.prod.clouderacaja.corp
-awscajamstr02.prod.clouderacaja.corp
-awscajamstr03.prod.clouderacaja.corp
+awscajamgmt01.qa.clouderacaja.corp
+awscajamstr01.qa.clouderacaja.corp
+awscajamstr02.qa.clouderacaja.corp
+awscajamstr03.qa.clouderacaja.corp
 
 [cdhccajaqa_wrk]
-awscajawrkr01.prod.clouderacaja.corp
-awscajawrkr02.prod.clouderacaja.corp
-awscajawrkr03.prod.clouderacaja.corp
-awscajawrkr04.prod.clouderacaja.corp
-awscajawrkr05.prod.clouderacaja.corp
+awscajawrkr01.qa.clouderacaja.corp
+awscajawrkr02.qa.clouderacaja.corp
+awscajawrkr03.qa.clouderacaja.corp
+awscajawrkr04.qa.clouderacaja.corp
+awscajawrkr05.qa.clouderacaja.corp
 
 [cdhccajaqa_edge]
 awscajaedge01.qa.clouderacaja.corp

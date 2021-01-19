@@ -219,6 +219,20 @@ nifiqa_hyp
 nifiqa_cm
 nifiqa_node
 
+[nifidev:vars]
+ansible_user = root
+ansible_password = temporal2020
+
+[nifidev]
+10.50.109.254
+
+[wrkst:vars]
+ansible_user = jhernandez
+ansible_password = '{{ ssh_user_saspldprod }}'
+
+[wrkst]
+10.50.166.90
+10.50.166.92
 
 [all:children]
 cdhccontaprod
@@ -230,3 +244,4 @@ cdhccajaqa
 cdhccajadev
 nifiprod
 nifiqa
+nifidev
